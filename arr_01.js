@@ -53,18 +53,47 @@ function getHTML() {
 
     for (let i = 0; i < TAGS.length; i++)
     { 
+
+        // htmlStr += checkTag(TAGS[i]);
+
         if(isOpenElement(TAGS[i]))
         {
             htmlStr += getElement(TAGS[i],"open");
+            // htmlStr += "\n";
         } 
         else
         {
             htmlStr += getElement(TAGS[i],"close");
-        }       
+            // htmlStr += "\n";  
+        } 
+        
     }
 
    return htmlStr;
 }
+
+function checkTag(tag) {
+
+    let str = "";
+
+    switch (tag)
+    {
+        case "html":
+            return str;
+
+        case "head":
+        case "body":
+            return str += "\t";
+
+        case "li":
+            return str += "\t\t\t"
+
+        default:
+            return str += "\t\t";
+    }
+}
+
+
 
 
 // Modul: Zusammenbau der Elements: <tagStr> --> Tests:
