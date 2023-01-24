@@ -16,6 +16,7 @@ einer HTML-Seite ausgibt:
 Verwenden Sie dafür die untenstehenden Arrays
 */
 
+const ERR_STR   = "ERROR !! Irgendwas ging schief !"
 const COBJ      = {open_o:"<",close_o:"</",close:">"}
 const CONTROLS  = ["<", "</", ">"];
 const TAGS = [  "html",
@@ -59,13 +60,15 @@ function getElement(tag,op)
     switch (op)
     {
         case "open":
-            return CONTROLS[0] + tag + CONTROLS[2];
+            // return CONTROLS[0] + tag + CONTROLS[2];
+            return COBJ.open_o + tag + COBJ.close
     
         case "close":
-            return CONTROLS[1] + tag + CONTROLS[2];
+            // return CONTROLS[1] + tag + CONTROLS[2];
+            return COBJ.close_o + tag + COBJ.close
 
         default:
-            return "ERROR !! Irgendwas ging schief !";
+            return ERR_STR;
     }
 
 }
