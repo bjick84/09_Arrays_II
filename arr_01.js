@@ -34,25 +34,33 @@ const TAGS = [  "html",
 let stack = [];
 
 // Modul: HTML-Synthese | Test
-// output(getHTML());
+output(getHTML());
 
 function getHTML() {
   
     let htmlStr = "";
+    let str;
 
-    for (let i = 0; i < TAGS.length; i++) {
-        htmlStr += "</" + TAGS[i] + ">";
+    for (let i = 0; i < TAGS.length; i++)
+    { 
+        if(true)
+        {
+            htmlStr += getElement(TAGS[i],"open");
+        } 
+        else
+        {
+            htmlStr += getElement(TAGS[i],"close");
+        }       
     }
 
    return htmlStr;
 }
 
 
-
 // Modul: Zusammenbau der Elements: <tagStr> --> Tests:
-output(getElement(TAGS[1],"open"));
-output(getElement(TAGS[1],"close"));
-output(getElement(TAGS[1]));
+// output(getElement(TAGS[1],"open"));
+// output(getElement(TAGS[1],"close"));
+// output(getElement(TAGS[1]));
 
 function getElement(tag,op)
 {
@@ -72,8 +80,6 @@ function getElement(tag,op)
     }
 
 }
-
-
 
 
 // Modul: Ausgabe | Test
