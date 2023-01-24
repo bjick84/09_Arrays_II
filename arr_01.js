@@ -50,7 +50,6 @@ output(getHTML());
 function getHTML() {
   
     let htmlStr = "";
-    let str;
 
     for (let i = 0; i < TAGS.length; i++)
     { 
@@ -92,10 +91,25 @@ function getElement(tag,op)
 
 }
 
+// output(isOpenElement(TAGS[0]));
+// output(isOpenElement(TAGS[1]));
+// output(isOpenElement(TAGS[2]));
+
 function isOpenElement(tag)
 {
-    return true;
-    
+    if (stack[stack.length -1] != tag)
+    {
+        stack.push(tag);
+        // output(stack);
+        return true;
+    }
+    else
+    {
+        stack.pop();
+        // output(stack);
+        return false;
+    }
+      
 }
 
 
