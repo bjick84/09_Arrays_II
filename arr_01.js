@@ -59,17 +59,17 @@ function getHTML() {
         if(isOpenElement(TAGS[i]))
         {
             htmlStr += getElement(TAGS[i],"open");
-            // htmlStr += "\n";
         } 
         else
         {
             htmlStr += getElement(TAGS[i],"close");
-            // htmlStr += "\n";  
         } 
         
+        // htmlStr += "\n";  
+
     }
 
-   return htmlStr;
+    return htmlStr;
 }
 
 function checkTag(tag) {
