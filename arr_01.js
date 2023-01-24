@@ -1,12 +1,23 @@
 /*********   Theorie **********/
 
-// push() / pop()
-// push --> Daten rein ... (+)
+// // push() / pop()
+// // push --> Daten rein ... (+)
+// let arr = [];
+// output(arr);
+// arr.push("Ich");
+// output(arr);
+// arr.push("bin");
+// output(arr);
+// arr.push("Marinus");
+// output(arr);
 
-
-// pop() --> Daten raus ... (-)
-
-
+// // pop() --> Daten raus ... (-)
+// output(arr.pop());
+// output(arr)
+// output(arr.pop());
+// output(arr)
+// output(arr.pop());
+// output(arr)
 
 /*
 Aufgabe:
@@ -43,7 +54,7 @@ function getHTML() {
 
     for (let i = 0; i < TAGS.length; i++)
     { 
-        if(true)
+        if(isOpenElement(TAGS[i]))
         {
             htmlStr += getElement(TAGS[i],"open");
         } 
@@ -79,6 +90,12 @@ function getElement(tag,op)
             return ERR_STR;
     }
 
+}
+
+function isOpenElement(tag)
+{
+    return true;
+    
 }
 
 
