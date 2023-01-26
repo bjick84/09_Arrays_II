@@ -64,7 +64,7 @@ function getHTML() {
         {
             htmlStr += getElement(TAGS[i],"close");
         } 
-        
+
         // htmlStr += "\n";  
 
     }
