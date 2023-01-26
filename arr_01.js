@@ -54,7 +54,7 @@ function getHTML() {
     for (let i = 0; i < TAGS.length; i++)
     { 
 
-        // htmlStr += checkTag(TAGS[i]);
+        htmlStr += checkTag(TAGS[i]);
 
         if(isOpenElement(TAGS[i]))
         {
@@ -65,7 +65,7 @@ function getHTML() {
             htmlStr += getElement(TAGS[i],"close");
         } 
 
-        // htmlStr += "\n";  
+        htmlStr += "\n";  
 
     }
 
